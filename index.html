@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEYOND THE VEIL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+            color: #0ff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #start-overlay {
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+        }
+
+        #start-title {
+            font-size: 64px;
+            color: #0ff;
+            text-shadow: 0 0 30px #0ff;
+            margin-bottom: 40px;
+            animation: glitch 2s infinite;
+        }
+
+        .start-description {
+            color: #aaa;
+            font-size: 20px;
+            max-width: 700px;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        .start-btn {
+            padding: 20px 50px;
+            font-size: 24px;
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0ff, #00aa88);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 30px #0ff;
+            transition: all 0.3s ease;
+        }
+
+        .start-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px #0ff;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            10% { transform: translate(-2px, 2px); }
+            20% { transform: translate(2px, -2px); }
+            30% { transform: translate(-1px, 1px); }
+        }
+    </style>
+</head>
+<body>
+    <div id="start-overlay">
+        <div id="start-title">BEYOND THE VEIL</div>
+        <div class="start-description">
+            You passed through the mirror.<br>
+            You returned to the same room.<br><br>
+            NYXX whispers: "You thought you sought the Core.<br>
+            The Core has always sought YOU."
+        </div>
+        <button class="start-btn" onclick="testClick()">ENTER THE VOID</button>
+    </div>
+
+    <script>
+        function testClick() {
+            console.log('CDN тест');
+            console.log('Время клика:', new Date().toLocaleString('ru-RU'));
+            console.log('Тестовый субдомен test.nyxx.su готов к проверке через Yandex CDN');
+        }
+
+        document.querySelector('.start-btn').addEventListener('mouseenter', () => {
+            console.log('🖱️ ХОВЕР НА КНОПКЕ - стили работают!');
+        });
+    </script>
+</body>
+</html>
